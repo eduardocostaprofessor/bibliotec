@@ -286,10 +286,31 @@ body {
 }
 
 /* *************** Footer ************** */
-footer .right {
+.footer {
+  padding: 30px 0;
+  color: white;
+  background-color: var(--dark-blue);
+}
+.footer h4 {
+  color: var(--green);
+  font-weight: 600;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer .right {
   padding: 20px;
   text-align: center;
 }
+
+
+
+
+
+
+
+
 /* Mobile e Tablet */
 @media screen and (max-width: 991px) {
   /* classes genéricas */
