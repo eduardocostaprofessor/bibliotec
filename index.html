@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/home.style.css" />
   </head>
   <body>
-    <!-- ************ CABEÇALHO ************-->Í
+    <!-- ************ CABEÇALHO ************ Í-->
     <header class="header">
       <div class="container header-flex">
         <img
@@ -150,47 +150,49 @@
         <div class="card">
           <img src="./images/livro4.png" alt="" />
           <h3>Mestres do Tempo</h3>
-          <div class="card-info">
-            <span class="titulo-autor">Autor(a):</span>
-            <span class="nome-autor">R.V. Campbell</span>
-          </div>
+          <span class="titulo-autor">Autor(a):</span>
+          <span class="nome-autor">R.V. Campbell</span>
         </div>
       </div>
     </section>
 
     <!-- ************ FOOTER ************-->
-     <footer class="footer">
+    <footer class="footer">
       <div class="container footer-flex">
+        
         <div class="footer-logo">
-          <img src="./images/logo-desktop.svg" alt="">
-          <img src="./images/logo-senai-vermelho.png" alt="">
+          <img class="img-footer-logo" src="./images/logo-desktop.svg" alt="" />
+          <img class="img-footer-senai" src="./images/logo-senai-vermelho.png" alt="" />
         </div>
 
-        <nav class="footer-links">
-          <div class="left-col">
+        <nav class="footer-nav">
+          
+          <div class="left-info">
             <h4>Biblioteca</h4>
             <a href="#">Baixar aplicativo</a>
             <a href="#">Suporte ao usuário</a>
-            <h4>Siga nas redes sociais</h4>
+            <h4 class="sociais-titulo">Siga nas redes sociais</h4>
           </div>
-          <div class="left-col">
+          
+          <div class="right-info">
             <h4>Quem somos</h4>
             <a href="#">Clientes</a>
             <a href="#">Benefícios</a>
-            <span>
-              <a href="#">Facebok</a>
-              <a href="#">Insta</a>
-              <a href="#">Linkedin</a>
+            <span class="sociais">
+              <a href="#"><img src="./images/facebook-icon.png" alt=""></a>
+              <a href="#"><img src="./images/instagram-icon.png" alt=""></a>
+              <a href="#"><img src="./images/linkedin-icon.png" alt=""></a>
             </span>
           </div>
         </nav>
       </div>
-      
-      <div class="container">
-        
+
+      <div class="container footer-mobile-only">
+        <p class="right">
+          &copy; 2024 Bibliotec - Todos os direitos reservados
+        </p>
       </div>
-      <p class="right">&copy; 2024 Bibliotec - Todos os direitos reservados</p>
-     </footer>
+    </footer>
 
     <script src="./scripts/index.js"></script>
   </body>
