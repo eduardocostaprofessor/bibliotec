@@ -1,0 +1,232 @@
+/* Imports de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-blue: #26333d;
+  --blue: #4a67df;
+  --green: #2fd6cb;
+}
+
+/* Desktop First à partir de 992px */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #dfdfdf;
+}
+
+/******************* Cabeçalho *******************/
+.header {
+  background-color: var(--dark-blue);
+  height: 96px;
+}
+
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 96px;
+  /* border: 1px solid white; */
+}
+.header .navbar .logo-mobile,
+.header .navbar .arrow-left,
+.menu-hamburger {
+  display: none;
+}
+
+.header .navbar .navbar-item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.4s;
+}
+.header .navbar .navbar-item:hover {
+  color: var(--green);
+}
+
+/******************* Fornmulário de Login *******************/
+.bk-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100wh;
+  height: calc(100vh - 96px);
+  background-image: url(../images/login-bk-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+}
+
+.form-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 80vw;
+  height: 80vh;
+  padding: 20px;
+  max-width: 900px;
+  min-width: 320px;
+  max-height: 670px;
+  min-height: 400px;
+  background-color: transparent;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+}
+
+.form-box h1 {
+  width: 100%;
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 730px;
+  /* border: 1px solid red; */
+}
+.formulario .frm-label,
+.formulario .frm-input {
+  width: 100%;
+}
+.formulario .frm-label {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.formulario .frm-input {
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  outline: none;  
+  border: none;
+}
+.formulario .frm-input {} 
+
+.formulario .frm-input:first-of-type {
+  margin-bottom: 40px;
+}
+
+.formulario .esqueci-senha {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: right;
+  color: #26333D;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.formulario .btn-entrar {
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #26333D;
+  border-radius: 10px;
+  transition: background-color .4s;
+}
+
+.formulario .btn-entrar:hover {
+  background-color: rgba(38, 51, 61, .8);
+}
+
+
+
+
+/* Mobile e Tablet */
+@media screen and (max-width: 991px) {
+  /* classes genéricas */
+  .mostra-menu {
+    left: 0 !important;
+    opacity: 0.97 !important;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  .header-flex {
+    padding: 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .menu-hamburger {
+    display: block;
+    width: 45px;
+    transition: transform 0.4s;
+  }
+  .menu-hamburger-rotate {
+    transform: rotate(45deg);
+  }
+
+  .header .navbar {
+    position: fixed;
+    top: 0;
+    left: -80vw;
+    z-index: 1000;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 80vw;
+    height: 100vh;
+    background-color: var(--dark-blue);
+    border-radius: 0 0 40px 0;
+    transition: left 0.4s, opacity 0.6s;
+  }
+  .header .navbar .arrow-left {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 1001;
+    display: block;
+    height: 25px;
+  }
+
+  .header .navbar .logo-mobile {
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 40px);
+    display: block; /* estava escondido no desktop */
+    width: 80px;
+  }
+}
