@@ -1,0 +1,291 @@
+/* Imports de fontes */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-blue: #26333d;
+  --blue: #4a67df;
+  --green: #2fd6cb;
+}
+
+/* Desktop First à partir de 992px */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f8f8;
+}
+.container {
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+/******************* Aside *******************/
+aside {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 260px;
+  height: 100vh;
+  padding: 80px 20px 40px;
+  background-color: #26333d;
+  border-radius: 0 30px 30px 0;
+
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+aside .mnu-arrow-left {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  background-color: #26333d;
+  color: white;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  padding: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: rotate 0.4s, right 0.4s;
+}
+
+aside .aside-top {
+  /* margin-top: 60px; */
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* border: 1px solid white; */
+}
+aside .logo-mobile {
+  width: 90px;
+  transition: width 0.5s;
+}
+
+aside .logo-mobile {
+  width: 90px;
+}
+
+aside .menu-lateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+  /* border: 1px solid red; */
+}
+
+aside .menu-lateral a:hover {
+  color: #2fd6cb;
+}
+
+aside .menu-lateral a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.4s;
+  /* border: 1px solid yellow ; */
+}
+
+aside .menu-lateral a img {
+  width: 30px;
+}
+.nav-item-active {
+  border-bottom: 1.5px solid #2fd6cb;
+}
+aside .user-logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: font-size 0.6s;
+}
+
+aside .user-logout img {
+  width: 30px;
+}
+
+aside .menu-lateral a,
+.user-logout {
+  font-size: 14px;
+}
+
+/* ASIDE */
+main {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: calc(100% - 270px);
+  height: 90vh;
+  padding: 30px;
+  overflow: auto;
+  background-color: white;
+  border-radius: 35px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+main h1 {
+  width: 100%;
+  font-size: 28px;
+  text-transform: uppercase ;
+  font-weight: 600;
+}
+
+
+/* barra de pesquisa */
+
+.search-bar {
+  width: 80%;
+  height: 40px;  
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* align-self: ce nter; */
+  /* border: 1px solid red; */
+}
+
+.search-bar .search-field {
+  width: 88%;
+  height: 35px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  
+  border: 1px solid #CCCCCC;
+}
+.search-bar .search-field input {
+  width: 90%;
+  padding: 2px;
+  border: none;
+  outline: none;
+}
+.search-bar .search-field img {
+  width: 20px;
+}
+
+/* article */
+.card-livro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22%;
+  max-width: 210px;
+  height: 290px;
+  padding: 22px 30px;
+
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.card-favorito {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  width: 25px;
+  cursor: pointer;
+}
+/* article img */
+.card-livro__foto {
+  width: 100%;
+}
+
+/* article p */
+.card-livro__info {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-livro__btn-detalhes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+  margin: 0 auto;
+  font-size: 11px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #2fd6cb;
+  border-radius: 8px;
+}
+
+
+
+/******************* EFEITO DE MINIMIZAR - Aside *******************/
+.aside-min {
+  width: 80px;
+}
+
+aside .mnu-arrow-left-min {
+  right: -12px;
+  rotate: 180deg;
+}
+aside .logo-mobile-min {
+  width: 45px;
+}
+aside .menu-lateral-min a {
+  /* justify-content: center; */
+  font-size: 0;
+  transition: font-size 0.6s;
+}
+aside .user-logout-min {
+  font-size: 0;
+}
+
+/******************* EFEITO DE MINIMIZAR - main *******************/
+.main-min {
+  width: calc(100% - 100px);
+}
+
+
+
+@media screen and (max-width: 991px) {
+}

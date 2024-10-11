@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livros Disponíveis</title>
+    <link rel="stylesheet" href="./styles/livros.css" />
+  </head>
+  <body>
+    <div class="container container-flex">
+      <aside class="">
+        <!-- <img src="./images/arrow-left.svg" class="mnu-arrow-left" alt=""> -->
+        <span onclick="recolheMenu(event);" class="mnu-arrow-left">&lt;</span>
+        <div class="aside-top">
+          <img class="logo-mobile" src="./images/logo-mobile.png" alt="" />
+
+          <nav class="menu-lateral">
+            <a href="#" class="nav-item-active">
+              <img src="./images/UserPlus-icon.svg" alt="" />
+              Perfil
+            </a>
+            <a href="#">
+              <img src="./images/Book-icon.png" alt="" />
+              Livros Disponíveis
+            </a>
+            <a href="#">
+              <img src="./images/BookHeart-Icon.png" alt="" />
+              Favoritos
+            </a>
+          </nav>
+        </div>
+
+        <a href="#" class="user-logout">
+          <img src="./images/logout-icon.svg" alt="" />
+          Sair
+        </a>
+      </aside>
+
+      <main>
+        <h1>Livros disponÍveis</h1>
+        <div class="search-bar">
+          <div class="search-field">
+            <input type="text">
+            <img src="./images/search-icon.svg" alt="">
+          </div>
+          <img src="./images/config-icon.png" alt="">
+        </div>
+        <article class="card-livro">
+          <img src="./images/white-heart.svg" class="card-favorito" alt="">
+          <img class="card-livro__foto" src="./images/livro1.png" alt="??">
+          <p class="card-livro__info">Filhas da lua</p>
+          <a href="#" class="card-livro__btn-detalhes">Detalhes</a>
+        </article>
+
+        <article class="card-livro">
+          <img src="./images/blue-heart.png" class="card-favorito" alt="">
+          <img class="card-livro__foto" src="./images/livro2.png" alt="??">
+          <p class="card-livro__info">Filhas da lua</p>
+          <a href="#" class="card-livro__btn-detalhes">Detalhes</a>
+        </article>
+
+        <article class="card-livro">
+          <img src="./images/blue-heart.png" class="card-favorito" alt="">
+          <img class="card-livro__foto" src="./images/livro3.png" alt="??">
+          <p class="card-livro__info">Filhas da lua</p>
+          <a href="#" class="card-livro__btn-detalhes">Detalhes</a>
+        </article>
+
+        <article class="card-livro">
+          <img src="./images/blue-heart.png" class="card-favorito" alt="">
+          <img class="card-livro__foto" src="./images/livro4.png" alt="??">
+          <p class="card-livro__info">Filhas da lua</p>
+          <a href="#" class="card-livro__btn-detalhes">Detalhes</a>
+        </article>
+
+        <article class="card-livro">
+          <img src="./images/blue-heart.png" class="card-favorito" alt="">
+          <img class="card-livro__foto" src="./images/livro2.png" alt="??">
+          <p class="card-livro__info">Filhas da lua</p>
+          <a href="#" class="card-livro__btn-detalhes">Detalhes</a>
+        </article>
+      </main>
+    </div>
+
+    <script src="./scripts/livros.js"></script>
+  </body>
+</html>
